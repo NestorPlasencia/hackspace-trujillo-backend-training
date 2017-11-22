@@ -44,6 +44,6 @@ var User = require('./models/user');
 // INICIAR SERVIDOR
 
 // Se corre el servidor en el puerto 8000
-server.listen(8000, function() {
+server.listen(process.env.PORT || 5000, function() {
 	console.log('El servidor esta escuchando en el puerto '+ 8000)
 });
