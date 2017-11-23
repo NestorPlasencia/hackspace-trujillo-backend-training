@@ -7,6 +7,7 @@ var swig = require('swig');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
+var cors = require('cors');
 
 //CONFIGURACIONES
 
@@ -26,6 +27,9 @@ server.use(express.static(__dirname + '/public'));
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
+//Configuracion de cors
+server.use(cors());
+
 // Importacion de rutas
 require('./routers')(server);
 
@@ -43,7 +47,7 @@ var User = require('./models/user');
 
 // INICIAR SERVIDOR
 
-// Se corre el servidor en el puerto 8000
-server.listen(process.env.PORT || 8000, function() {
-	console.log('El servidor esta escuchando en el puerto '+ 8000)
+// Se corre el servidor en el puerto 5000
+server.listen(process.env.PORT || 5000, function() {
+	console.log('El servidor esta escuchando en el puerto '+ 5000)
 });
