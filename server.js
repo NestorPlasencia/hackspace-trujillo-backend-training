@@ -36,7 +36,7 @@ require('./routers')(server);
 // CONFIGURACIONES DB
 
 // Integración de mongoose
-mongoose.connect('mongodb://NestorPlasencia:123456@ds115446.mlab.com:15446/hackspace', { useMongoClient: true });
+mongoose.connect('mongodb://NestorPlasencia:omoshiroi@ds115446.mlab.com:15446/hackspace', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 // Requerimiento de modelo speciality
